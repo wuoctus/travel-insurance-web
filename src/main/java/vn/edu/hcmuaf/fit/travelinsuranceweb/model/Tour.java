@@ -1,27 +1,30 @@
-package vn.edu.hcmuaf.fit.travelinsurancewebsite.model;
+package vn.edu.hcmuaf.fit.travelinsuranceweb.model;
 
 import java.math.BigDecimal;
 
 public class Tour {
-    int tour_ID;
-    String name;
-    String badge_type;
-    String duration;
-    BigDecimal rating;
-    String route;
-    int price;
-    String image;
-    String description;
-    int status;
-
+    private int id;
+    private String name;
+    private int regionId;
+    private int cityId;
+    private String duration;
+    private BigDecimal rating;
+    private String route;
+    private int price;
+    private String image;
+    private String description;
+    private int status;
+    private Region region;
+    private City city;
     public Tour() {
     }
 
-    public Tour(int id, String name, String badge_Type, String duration, BigDecimal rating, String route, int price, String image, String description, int status) {
-        this.tour_ID = id;
-        this.name = name;
-        this.badge_type = badge_Type;
+    public Tour(String duration, int id, String name, int regionId, int cityId, BigDecimal rating, String route, int price, String image, String description, int status) {
+        this.id = id;
         this.duration = duration;
+        this.name = name;
+        this.regionId = regionId;
+        this.cityId = cityId;
         this.rating = rating;
         this.route = route;
         this.price = price;
@@ -30,27 +33,20 @@ public class Tour {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Tour{" +
-                "tour_ID=" + tour_ID +
-                ", name='" + name + '\'' +
-                ", badge_type='" + badge_type + '\'' +
-                ", duration='" + duration + '\'' +
-                ", rating=" + rating +
-                ", route='" + route + '\'' +
-                ", price=" + price +
-                ", image='" + image + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+    public String getDuration() {
+        return duration;
     }
 
-    public int getTour_ID() {
-        return tour_ID;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
-    public void setTour_ID(int tour_ID) {
-        this.tour_ID = tour_ID;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -61,20 +57,20 @@ public class Tour {
         this.name = name;
     }
 
-    public String getBadge_type() {
-        return badge_type;
+    public int getRegionId() {
+        return regionId;
     }
 
-    public void setBadge_type(String badge_type) {
-        this.badge_type = badge_type;
+    public void setRegionId(int regionId) {
+        this.regionId = regionId;
     }
 
-    public String getDuration() {
-        return duration;
+    public int getCityId() {
+        return cityId;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
     }
 
     public BigDecimal getRating() {
@@ -123,5 +119,39 @@ public class Tour {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public Region getRegion() {
+        return region;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Tour{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", regionId=" + regionId +
+                ", cityId=" + cityId +
+                ", rating=" + rating +
+                ", route='" + route + '\'' +
+                ", price=" + price +
+                ", image='" + image + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                ", region=" + region +
+                ", city=" + city +
+                '}';
     }
 }
