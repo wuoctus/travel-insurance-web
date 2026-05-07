@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.travelinsurancewebsite.model;
+package vn.edu.hcmuaf.fit.travelinsuranceweb.model;
 
 import java.io.Serializable;
 
