@@ -1,10 +1,11 @@
-package vn.edu.hcmuaf.fit.travelinsurancewebsite.model;
+package vn.edu.hcmuaf.fit.travelinsuranceweb.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OrderDetail {
-    private int order_detail_id;
-    private int order_id;
+public class OrderItem implements Serializable {
+    private int id;
+    private int orderId;
     private String productType;
     private int productRefId;
     private String productName;
@@ -12,18 +13,18 @@ public class OrderDetail {
     private int quantity;
     private Date startDate;
 
-    public OrderDetail(Date startDate, int quantity, double price, String productName, int productRefId, String productType, int order_id, int order_detail_id) {
+    public OrderItem(Date startDate, int quantity, double price, String productName, int productRefId, String productType, int order_id, int id) {
         this.startDate = startDate;
         this.quantity = quantity;
         this.price = price;
         this.productName = productName;
         this.productRefId = productRefId;
         this.productType = productType;
-        this.order_id = order_id;
-        this.order_detail_id = order_detail_id;
+        this.orderId = orderId;
+        this.id = id;
     }
 
-    public OrderDetail() {
+    public OrderItem() {
     }
 
     public Date getStartDate() {
@@ -74,27 +75,27 @@ public class OrderDetail {
         this.productType = productType;
     }
 
-    public int getOrder_id() {
-        return order_id;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
-    public int getOrder_detail_id() {
-        return order_detail_id;
+    public int getId() {
+        return id;
     }
 
-    public void setOrder_detail_id(int order_detail_id) {
-        this.order_detail_id = order_detail_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "OderDetail{" +
-                "order_detail_d=" + order_detail_id +
-                ", order_id=" + order_id +
+                "id=" + id +
+                ", order_id=" + orderId +
                 ", productType='" + productType + '\'' +
                 ", productRefId=" + productRefId +
                 ", productName='" + productName + '\'' +

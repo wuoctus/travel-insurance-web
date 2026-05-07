@@ -1,73 +1,73 @@
-package vn.edu.hcmuaf.fit.travelinsurancewebsite.model;
+package vn.edu.hcmuaf.fit.travelinsuranceweb.model;
 
 import java.io.Serializable;
 
 public class TourDetails implements Serializable {
-    int tour_detail_ID;
-    int tour_ID;
-    String day_number;
-    String day_title;
-    String day_content;
+    int id;
+    int tourId;
+    String dayNumber;
+    String dayTitle;
+    String dayContent;
 
     public TourDetails() {
     }
 
-    public TourDetails(int tour_detail_ID, int tour_ID, String day_number, String day_title, String day_content) {
-        this.tour_detail_ID = tour_detail_ID;
-        this.tour_ID = tour_ID;
-        this.day_number = day_number;
-        this.day_title = day_title;
-        this.day_content = day_content;
+    public TourDetails(int id, int tourId, String dayNumber, String dayTitle, String dayContent) {
+        this.id = id;
+        this.tourId = tourId;
+        this.dayNumber = dayNumber;
+        this.dayTitle = dayTitle;
+        this.dayContent = dayContent;
     }
 
-    public int getTour_detail_ID() {
-        return tour_detail_ID;
+    public int getId() {
+        return id;
     }
 
-    public void setTour_detail_ID(int tour_detail_ID) {
-        this.tour_detail_ID = tour_detail_ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getTour_ID() {
-        return tour_ID;
+    public int getTourId() {
+        return tourId;
     }
 
-    public void setTour_ID(int tour_ID) {
-        this.tour_ID = tour_ID;
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
     }
 
-    public String getDay_number() {
-        return day_number;
+    public String getDayNumber() {
+        return dayNumber;
     }
 
-    public void setDay_number(String day_number) {
-        this.day_number = day_number;
+    public void setDayNumber(String dayNumber) {
+        this.dayNumber = dayNumber;
     }
 
-    public String getDay_title() {
-        return day_title;
+    public String getDayTitle() {
+        return dayTitle;
     }
 
-    public void setDay_title(String day_title) {
-        this.day_title = day_title;
+    public void setDayTitle(String dayTitle) {
+        this.dayTitle = dayTitle;
     }
 
-    public String getDay_content() {
-        return day_content;
+    public String getDayContent() {
+        return dayContent;
     }
 
-    public void setDay_content(String day_content) {
-        this.day_content = day_content;
+    public void setDayContent(String dayContent) {
+        this.dayContent = dayContent;
     }
 
     @Override
     public String toString() {
         return "TourDetails{" +
-                "tour_detail_ID=" + tour_detail_ID +
-                ", tour_ID=" + tour_ID +
-                ", day_number='" + day_number + '\'' +
-                ", day_title='" + day_title + '\'' +
-                ", day_content='" + day_content + '\'' +
+                "id=" + id +
+                ", tourId=" + tourId +
+                ", dayNumber='" + dayNumber + '\'' +
+                ", dayTitle='" + dayTitle + '\'' +
+                ", dayContent='" + dayContent + '\'' +
                 '}';
     }
 }
