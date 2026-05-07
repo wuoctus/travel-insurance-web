@@ -12,11 +12,12 @@ public class User {
     private String createdDate;
     private int status;
     private Role role;
+    private int points;
 
     public User() {
     }
 
-    public User(int userId, int roleID, String username, String pass, String email, int isEmailVerified, String phone, String fullName, String createdDate, int status) {
+    public User(int points, int userId, int roleID, String username, String pass, String email, int isEmailVerified, String phone, String fullName, String createdDate, int status) {
         this.userId = userId;
         this.roleID = roleID;
         this.username = username;
@@ -27,6 +28,14 @@ public class User {
         this.fullName = fullName;
         this.createdDate = createdDate;
         this.status = status;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     public int getUserId() {
@@ -115,5 +124,23 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", roleID=" + roleID +
+                ", username='" + username + '\'' +
+                ", pass='" + pass + '\'' +
+                ", email='" + email + '\'' +
+                ", isEmailVerified=" + isEmailVerified +
+                ", phone='" + phone + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", status=" + status +
+                ", role=" + role +
+                ", points=" + points +
+                '}';
     }
 }

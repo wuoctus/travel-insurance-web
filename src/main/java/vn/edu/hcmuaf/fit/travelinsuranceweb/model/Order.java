@@ -1,7 +1,7 @@
-package vn.edu.hcmuaf.fit.travelinsurancewebsite.model;
+package vn.edu.hcmuaf.fit.travelinsuranceweb.model;
 
 public class Order {
-    private int order_id;
+    private int id;
     private String customerName;
     private String customerPhone;
     private String customerEmail;
@@ -10,10 +10,11 @@ public class Order {
     private double discountAmount;
     private double totalAmount;
     private String paymentMethod;
+    private int userId;
     private String status;
 
-    public Order(int order_id, String customerName, String customerPhone, String customerEmail, String customerAddress, double subtotalAmount, double discountAmount, double totalAmount, String paymentMethod, String status) {
-        this.order_id = order_id;
+    public Order(int id, String customerName, String customerPhone, String customerEmail, String customerAddress, double subtotalAmount, double discountAmount, double totalAmount, String paymentMethod, String status) {
+        this.id = id;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.customerEmail = customerEmail;
@@ -29,11 +30,11 @@ public class Order {
     }
 
     public int getOrder_id() {
-        return order_id;
+        return id;
     }
 
     public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+        this.id = order_id;
     }
 
     public String getStatus() {
@@ -111,7 +112,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "order_id=" + order_id +
+                "order_id=" + id +
                 ", customerName='" + customerName + '\'' +
                 ", customerPhone='" + customerPhone + '\'' +
                 ", customerEmail='" + customerEmail + '\'' +
